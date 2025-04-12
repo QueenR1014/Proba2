@@ -10,13 +10,16 @@ data$Resultado <- paste(data$Team.A.Score, data$Team.B.Score, sep = "-")
 frecuencias <- table(data$Resultado)
 frecuencias_ordenadas <- sort(frecuencias, decreasing = TRUE)
 
+n <- length(frecuencias_ordenadas)
+colores <- heat.colors(n)[n:1]
+
 ruta_jpg <- "graficos/frecuencia_resultados.jpg"
 
 jpeg(ruta_jpg, width = 800, height = 600, quality = 100)
 
 barplot(frecuencias_ordenadas,
         las = 2,
-        col = "#962626",
+        col = colores,
         main = "Frecuencia de Resultados por Marcador",
         xlab = "Marcador (A-B)",
         ylab = "Frecuencia")
