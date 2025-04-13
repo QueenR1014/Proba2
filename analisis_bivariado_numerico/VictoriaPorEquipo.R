@@ -1,7 +1,6 @@
 library(tidyverse)
 library(wesanderson)
 
-
 win_methods <- read_csv("win_loss_methods_count.csv")
 
 win_methods_filtered <- win_methods %>%
