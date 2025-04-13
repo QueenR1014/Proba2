@@ -15,6 +15,7 @@ jpeg(ruta_jpg, width = 800, height = 600, quality = 100)
 
 ggplot(tabla_agente_mapa, aes(x = Agente, y = Mapa, fill = Frecuencia)) +
     geom_tile(color = "white") +
+    geom_text(aes(label = Frecuencia), color = "black", size = 3) +
     scale_fill_gradient(low = "#d5cff1", high = "#3b0539") +
     labs(title = "Frecuencia de Agentes por Mapa (Valorant Champions 2024)",
         x = "Agente", y = "Mapa") +
