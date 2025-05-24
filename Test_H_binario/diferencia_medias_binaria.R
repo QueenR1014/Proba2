@@ -26,4 +26,3 @@ df_headshot_others$HS <- as.numeric(gsub("%", "", df_headshot_others$HS)) / 100
 result_greater <- t.test(df_headshot_EG$HS, df_headshot_others$HS, alternative = "greater", conf.level = 0.95)
 result_less <- t.test(df_headshot_EG$HS, df_headshot_others$HS, alternative = "less", conf.level = 0.95)
 result_two_sided <- t.test(df_headshot_EG$HS, df_headshot_others$HS, alternative = "two.sided", conf.level = 0.95)
- 
