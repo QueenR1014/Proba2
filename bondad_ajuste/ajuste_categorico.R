@@ -14,7 +14,7 @@ team_agent_counts <- df %>%
 
 all_picked_agents <- unlist(team_agent_counts$Agents)
 
-# Get observed counts (number of times each agent was picked across all teams)
+
 observed_counts <- table(all_picked_agents)
 
 #Probabilidades obtenidas de https://liquipedia.net/valorant/Patch_9.02/Statistics
